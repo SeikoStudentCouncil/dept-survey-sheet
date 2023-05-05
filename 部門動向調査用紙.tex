@@ -1,0 +1,126 @@
+\documentclass[a4paper,landscape,twocolumn,10pt]{ltjsarticle}
+\pagestyle{empty}
+\usepackage[top=20truemm,bottom=20truemm,left=20truemm,right=20truemm]{geometry}
+\usepackage{ifthen}
+\usepackage{graphicx}
+\usepackage{xkeyval}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\lhead{\rule{8mm}{8mm}}
+\rhead{\rule{6mm}{6mm}}
+\lfoot{\rule{6mm}{6mm}}
+\rfoot{\rule{6mm}{6mm}}
+\chead{}
+\cfoot{}
+
+\makeatletter
+
+\define@cmdkeys{個人情報}[]{中高,学年,組,番号a,番号b,学籍番号a,学籍番号b,学籍番号c,学籍番号d,学籍番号e,姓,名}
+
+\newcommand{\individual}[1]{
+  \begingroup
+  \setkeys{個人情報}{#1}
+  
+  \begin{center}
+  {\huge 部門動向調査}
+  \end{center}
+  
+  
+     {\small{\bf \large 初めに}
+     \begin{quote}
+先日の部門動向仮調査について。\\
+今回、新しく制度が変わったことについて、幹部の口から説明した方が良い、と判断しましたのですが、それによって、当日まで多くの生徒が変更点について把握していない、という事態を引き起こし、皆さんを困惑させてしまいました。これは、実行委員会側の誤った判断によるものです。大変申し訳ありませんでした。\\
+よって、本調査は前回の仮調査を、単純化し、簡単に行えるように改定しました。前回同様、幹部の指示にしたがって記入していただければ幸いです。
+   \end{quote}}
+   
+   
+   {\small{\bf \large 回答の際の注意}
+  \begin{quote}
+      \begin{itemize}
+      \item 自分が入りたいと思う部門、団体を選びチェックボックスをマークしてください。
+      \item 選んでいい部門や団体の上限が今年から変更されました。級長の説明及び先日公開した「第62回聖光祭 新シフト制度について」をよく読んでください。
+      \item 展示部門と展示団体は異なりますので注意してください。
+      \item 食品店舗に所属したい人は食品部門に所属してください。
+      \end{itemize}
+   \end{quote}
+   
+   {\bf \large 所属できる団体数について}
+   \begin{quote}
+   \begin{description}
+   \item[当日型]
+　展示部門、外務部門、会計部門、食品部門、放送部門、演出部門、美化部門、企画部門、展示団体、食品団体、生徒会\mbox{}\\
+　上記した所属はすべて1つの枠ととしてカウントし、4つ以上の所属は原則認めません。
+   \item[前日型]
+　技術部門、管理部門、装飾部門\mbox{}\\
+　上記した所属はすべて1つの枠としてカウントせず、自由に参加できます。
+   \item[部門外所属]
+　招待試合、講堂及び小講堂イベント、企画の出演者、選択芸術、また生徒会など\mbox{}\\
+　上記した所属は各団体の長からメンバー名簿を受け、こちら側で自動的に追加します。
+　また、複雑になるのを防ぐため、今回は集計しません。後日実行委員会が対応します。\\
+   \item[バンドを組んで出演する生徒]
+   演出部門に所属してください。
+   \item[展示部門と展示団体について]
+   展示部門と展示団体は異なるものです。注意してください。
+   
+   \end{description}
+その他質問があれば欄を用意してありますのでご入力ください。\\
+当日型は先述した通り、最大3つまでとなっています。また、仮調査とは異なり、これ以外の制限は設けないこととしました。しかし、当日の活動が物理的に不可能になりそうな場合は、こちらから連絡させていただきます。ご了承ください。
+\end{quote}}
+
+  \newpage
+  
+  \begin{enumerate}
+  \item 部門（当日型）\\
+   {\footnotesize 部門に所属する場合はマークしてください。最大三項目まで選択できます。}\\
+   ○ 食品部門　○ 外務部門　○ 会計部門　○ 放送部門\\○ 演出部門　○ 美化部門　○ 企画部門　○ 展示部門
+  \item 部門（前日型）\\
+  {\footnotesize これらは枠に含まれない所属です。}\\
+   ○ 装飾部門　○ 管理部門
+  \item 当日型（展示団体）
+  
+  \item 部活動招待試合\\
+  {\footnotesize ある場合はマークして内容を記入してください。}\\
+   ○ \underline{\hspace{10cm}}
+  \item{Tシャツサイズ}\\
+  {\footnotesize Tシャツの購入はこのフォームの集計と調整が終わり次第発注を行います。保護者には所属と値段を後日メールで配信し、返信や問い合わせがない場合にはTシャツを必要分購入することに同意したことになります。この欄にマークすることは同意したとみなします。}\\
+  ○ S　○ M　○ L　○ LL
+  \end{enumerate}
+  
+
+\begin{table}[h]
+\begin{flushright}
+  {\small \begin{tabular}{|r|r|c|r|c|}\hline
+  \multicolumn{1}{|c|}{学籍番号} & \multicolumn{1}{|c|}{学年} & 組 & \multicolumn{1}{|c|}{番号} & 氏名 \\ \hline \hline 
+  \multicolumn{1}{|c|}{\学籍番号a\学籍番号b\学籍番号c\学籍番号d\学籍番号e} & \multicolumn{1}{|c|}{\中高\学年} & \組 & \multicolumn{1}{|c|}{\番号a\番号b} & \姓　\名 \\ \hline
+  \ifthenelse{\学籍番号a = 0}{●}{◯} \ifthenelse{\学籍番号b = 0}{●}{◯} \ifthenelse{\学籍番号c = 0}{●}{◯} \ifthenelse{\学籍番号d = 0}{●}{◯} \ifthenelse{\学籍番号e = 0}{●}{◯} & \ifthenelse{\equal{\中高}{J}}{●}{◯} \ifthenelse{\学年 = 1}{●}{◯} & \ifthenelse{\equal{\組}{A}}{●}{◯} & \ifthenelse{\番号a = 0}{●}{◯} \ifthenelse{\番号b = 0}{●}{◯}  \\ 
+  \ifthenelse{\学籍番号a = 1}{●}{◯} \ifthenelse{\学籍番号b = 1}{●}{◯} \ifthenelse{\学籍番号c = 1}{●}{◯} \ifthenelse{\学籍番号d = 1}{●}{◯} \ifthenelse{\学籍番号e = 1}{●}{◯} & \ifthenelse{\equal{\中高}{S}}{●}{◯} \ifthenelse{\学年 = 2}{●}{◯} & \ifthenelse{\equal{\組}{B}}{●}{◯} & \ifthenelse{\番号a = 1}{●}{◯} \ifthenelse{\番号b = 1}{●}{◯}  \\ 
+  \ifthenelse{\学籍番号a = 2}{●}{◯} \ifthenelse{\学籍番号b = 2}{●}{◯} \ifthenelse{\学籍番号c = 2}{●}{◯} \ifthenelse{\学籍番号d = 2}{●}{◯} \ifthenelse{\学籍番号e = 2}{●}{◯} & \ifthenelse{\学年 = 3}{●}{◯} & \ifthenelse{\equal{\組}{C}}{●}{◯} & \ifthenelse{\番号a = 2}{●}{◯} \ifthenelse{\番号b = 2}{●}{◯}  \\
+  \ifthenelse{\学籍番号a = 3}{●}{◯} \ifthenelse{\学籍番号b = 3}{●}{◯} \ifthenelse{\学籍番号c = 3}{●}{◯} \ifthenelse{\学籍番号d = 3}{●}{◯} \ifthenelse{\学籍番号e = 3}{●}{◯} &  & \ifthenelse{\equal{\組}{D}}{●}{◯} & \ifthenelse{\番号a = 3}{●}{◯} \ifthenelse{\番号b = 3}{●}{◯}  \\ 
+  \ifthenelse{\学籍番号a = 4}{●}{◯} \ifthenelse{\学籍番号b = 4}{●}{◯} \ifthenelse{\学籍番号c = 4}{●}{◯} \ifthenelse{\学籍番号d = 4}{●}{◯} \ifthenelse{\学籍番号e = 4}{●}{◯} &  & \ifthenelse{\equal{\組}{E}}{●}{◯} & \ifthenelse{\番号a = 4}{●}{◯} \ifthenelse{\番号b = 4}{●}{◯}  \\ 
+  \ifthenelse{\学籍番号a = 5}{●}{◯} \ifthenelse{\学籍番号b = 5}{●}{◯} \ifthenelse{\学籍番号c = 5}{●}{◯} \ifthenelse{\学籍番号d = 5}{●}{◯} \ifthenelse{\学籍番号e = 5}{●}{◯} &  & \ifthenelse{\equal{\組}{F}}{●}{◯} & \ifthenelse{\番号b = 5}{●}{◯}  \\
+  \ifthenelse{\学籍番号a = 6}{●}{◯} \ifthenelse{\学籍番号b = 6}{●}{◯} \ifthenelse{\学籍番号c = 6}{●}{◯} \ifthenelse{\学籍番号d = 6}{●}{◯} \ifthenelse{\学籍番号e = 6}{●}{◯} &  &  & \ifthenelse{\番号b = 6}{●}{◯}  \\ 
+  \ifthenelse{\学籍番号a = 7}{●}{◯} \ifthenelse{\学籍番号b = 7}{●}{◯} \ifthenelse{\学籍番号c = 7}{●}{◯} \ifthenelse{\学籍番号d = 7}{●}{◯} \ifthenelse{\学籍番号e = 7}{●}{◯} &  & & \ifthenelse{\番号b = 7}{●}{◯} \\ 
+  \ifthenelse{\学籍番号a = 8}{●}{◯} \ifthenelse{\学籍番号b = 8}{●}{◯} \ifthenelse{\学籍番号c = 8}{●}{◯} \ifthenelse{\学籍番号d = 8}{●}{◯} \ifthenelse{\学籍番号e = 8}{●}{◯} &  & & \ifthenelse{\番号b = 8}{●}{◯} \\
+  \ifthenelse{\学籍番号a = 9}{●}{◯} \ifthenelse{\学籍番号b = 9}{●}{◯} \ifthenelse{\学籍番号c = 9}{●}{◯} \ifthenelse{\学籍番号d = 9}{●}{◯} \ifthenelse{\学籍番号e = 9}{●}{◯} &  & & \ifthenelse{\番号b = 9}{●}{◯} \\ \cline{1-4}
+  \end{tabular}}
+  
+   \vspace{\fill}
+  ※ここには何も記入しないでください\\
+  \end{flushright}
+\end{table}
+
+
+  \endgroup
+  \newpage
+}
+
+\makeatother
+
+\begin{document}
+
+\individual{中高={S},学年={2},組={E},番号a={1},番号b={7},学籍番号a={6},学籍番号b={0},学籍番号c={0},学籍番号d={8},学籍番号e={4},姓={三枝},名={義啓}}
+
+\end{document}
